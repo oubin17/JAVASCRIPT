@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        let num = 1
+        num = 1.22
+        // NaN not a number
+        console.log('abc' - 2)
+
+        // 模版字符串，反引号 + ${}
+        let age = 18
+        document.write(`我今年${age}岁了`)
+
+        //未定义数据类型
+        let k
+        console.log(k)
+        //检测数据类型
+        let n = 1.2
+        console.log(typeof (n))
+        n = 'k'
+        console.log(typeof (n))
+        n = [1, 2, 3]
+        console.log(typeof (n))
+        console.log(typeof n)
+
+        // 默认转成数字
+        console.log(+'123')
+
+        //显示转换
+        let a = Number('321')
+        console.log(typeof a)
+        console.log(parseInt('12px'))
+        console.log(parseFloat('12.1px'))
+
+    </script>
+</body>
+
+</html>
