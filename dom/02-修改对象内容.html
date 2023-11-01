@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="box">我是文字内容 </div>
+    <script>
+        //innerText不解析标签
+        const box = document.querySelector('.box')
+        //获取文字内容
+        // console.log(box.innerText)
+        // //修改文字内容
+        // box.innerText = '我是一个盒子'
+
+        //innerHTML解析标签
+        console.log(box.innerHTML)
+        box.innerHTML = '<strong>我是一只小鸟</strong>'
+
+    </script>
+</body>
+
+</html>
