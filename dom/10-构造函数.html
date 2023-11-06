@@ -25,6 +25,18 @@
         Pig.getAge()
         Pig.getEye()
 
+        console.log('属性名:' + Object.keys(peiqi))
+        console.log('属性值:' + Object.values(peiqi))
+        const oo = {}
+        Object.assign(oo, peiqi)
+        console.log(oo)
+        peiqi.name = '小猪佩奇'
+        console.log(oo)
+        console.log(peiqi)
+        //assign常见于给对象添加属性
+        Object.assign(peiqi, { gender: 'animal' })
+        console.log(peiqi)
+
 
 
     </script>
