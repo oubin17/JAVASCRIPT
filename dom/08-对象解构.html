@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // 1.对象解构，要求变量名字和属性名字一模一样
+        const obj = {
+            uname: "ob",
+            age: 18
+        }
+        // const uname = '123'
+
+        // const { uname, age } = {
+        //     uname: "ob",
+        //     age: 18
+        // }
+        // console.log(uname)
+
+        // 2.对象结构的变量名，可以重新改名
+        // const { uname: username, age } = {
+        //     uanme: "ob",
+        //     age: 18
+        // }
+        // console.log(username)
+        //3. 数组对象的解构
+        // const pig = [{
+        //     uname: 'ob',
+        //     age: 18
+        // }]
+        // const [{ uname, age }] = pig
+
+        const msg = {
+            "code": 200,
+            "msg": "获取成功",
+            "data": [
+                {
+                    "id": 1,
+                    "name": "名字"
+                }
+            ]
+        }
+        const { data } = msg;
+        console.log(data)
+        function render({ data }) {
+            console.log(data)
+        }
+        render(msg)
+
+    </script>
+</body>
+
+</html>
