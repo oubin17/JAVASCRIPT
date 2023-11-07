@@ -8,30 +8,45 @@
 </head>
 
 <body>
+    原型对象在内存中指回保存一份，可以类似static 方法
     <script>
         function Dog(age) {
             this.age = age
 
         }
-        // 原型对象里面的this指向实例对象
+        // 1.原型对象里面的this指向实例对象
+        //这里会报错，
         Dog.prototype.getAge = () => {
             console.log(this)
 
-            console.log('年龄：' + age)
+            console.log('年龄：' + this.age)
         }
         const dog = new Dog(11)
-        dog.getAge()
+        console.log(dog.age)
+        Dog.getAge()
 
+
+
+        //constructor属性用来指回到原对象
+        // Dog.prototype = {
+        //     constructor: Dog,
+        //     getName: function () {
+        //         console.log('a dog')
+        //     }
+        // }
+        // console.log(Dog.prototype)
+        // console.log(Dog.prototype.constructor)
+        // console.log(Dog.getName())
 
 
 
         // 直接用this，谁调用指向谁
-        const arr = [1, 2, 3]
-        Array.prototype.max = function () {
-            console.log(this)
-            return Math.max(...this)
-        }
-        console.log(arr.max())
+        // const arr = [1, 2, 3]
+        // Array.prototype.max = function () {
+        //     console.log(this)
+        //     return Math.max(...this)
+        // }
+        // console.log(arr.max())
     </script>
 </body>
 
