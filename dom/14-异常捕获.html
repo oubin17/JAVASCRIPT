@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //直接在这里打断点
+        // debugger
+
+        const obj = {
+            age: 18
+        }
+        function fn() {
+            console.log('函数')
+            console.log(this)
+        }
+        try {
+            fn.apply()
+            fn.call()
+            //bind不会调用函数，this返回一个新函数
+            const fun = fn.bind(obj)
+            fun()
+
+
+
+
+            throw new Error(123)
+        } catch (err) {
+            throw new Error('error msg')
+        } finally {
+            console.log('123')
+        }
+    </script>
+</body>
+
+</html>

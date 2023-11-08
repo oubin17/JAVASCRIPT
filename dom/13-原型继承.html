@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        const Person = {
+            eyes: 2,
+            head: 1
+        }
+        function Woman() {
+
+        }
+        //Woman 通过原型集成Person
+        Woman.prototype = Person
+        Woman.prototype.constructor = Woman
+        const red = new Woman()
+        console.log(red.eyes)
+        console.log(Woman.prototype)
+        function Man() {
+
+        }
+
+        //如果Man的原型对象也指向Person，修改一个都会有影响
+        // 为了避免，需要new一个对象
+        Man.prototype = new Person()
+
+    </script>
+</body>
+
+</html>
