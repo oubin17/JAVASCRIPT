@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- 1.引入axios库https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js">
+    </script>
+    <!-- 2.使用函数 -->
+    <script>
+        let url = 'http://hmajax.itheima.net/api/province'
+        axios({
+            url: 'http://hmajax.itheima.net/api/province'
+        }).then(result => {
+            console.log(result)
+
+        })
+
+
+    </script>
+</body>
+
+</html>
